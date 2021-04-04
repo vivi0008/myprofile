@@ -3,10 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createMuiTheme, responsiveFontSizes, MuiThemeProvider } from '@material-ui/core'
+
+let theme = createMuiTheme({
+  palette:{
+    primary:{
+      main:"#f5f5f5"
+    }
+  },
+  typography:{
+    fontFamily: [
+      "Open Sans",
+      "sans-serif"
+    ].join(','),
+  }
+})
+
+theme = responsiveFontSizes(theme)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MuiThemeProvider theme={theme}>
+      <App />
+    </MuiThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

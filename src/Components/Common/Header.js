@@ -75,6 +75,14 @@ export default function Header() {
                     <Typography>RESUME</Typography>
                 </IconButton>
             </MenuItem>
+
+            <MenuItem>
+                <Link to="/project" style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                    <IconButton color="inherit" >
+                        <Typography>HOME</Typography>
+                    </IconButton>
+                </Link>
+            </MenuItem>
         </Menu>
     );
 
@@ -96,6 +104,11 @@ export default function Header() {
                         <IconButton color="inherit" href="/waiwarit-resume.pdf">
                             <Typography>RESUME</Typography>
                         </IconButton>
+                        <Link to="/project"  style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                            <IconButton color="inherit" >
+                                <Typography>PROJECT</Typography>
+                            </IconButton>
+                        </Link>
                     </div>
                     <div className={classes.sectionMobile}>
                         <IconButton
